@@ -1,0 +1,57 @@
+<div class="user-card-wrapper">
+  <!-- Back button top-left -->
+  <div class="user-card-header">
+    <button mat-raised-button color="primary" routerLink="/users" class="back-btn">
+      <mat-icon>arrow_back</mat-icon> Go Back
+    </button>
+  </div>
+
+  <!-- User Details Card -->
+  <div class="user-details-card" *ngIf="userinfo">
+    <div class="user-header">
+      <div class="info">
+        <h4>{{ userinfo.username }}</h4>
+        <span class="role">{{ userinfo.userrole }}</span>
+      </div>
+
+      <!-- Avatar -->
+      <div class="avatar">
+        <img
+          [src]="userinfo.imageurl"
+          alt="User Image"
+          *ngIf="userinfo.imageurl; else fallback"
+        />
+        <ng-template #fallback>
+          {{ userinfo.username.charAt(0) | uppercase }}
+        </ng-template>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="user-body">
+      <div class="detail-row">
+        <span class="label">User ID</span>
+        <span class="value">{{ userinfo.userid }}</span>
+      </div>
+      <div class="detail-row" *ngIf="userinfo.email">
+        <span class="label">Email</span>
+        <span class="value">{{ userinfo.email }}</span>
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="user-actions d-flex justify-content-end">
+      <button  [routerLink]="['/users',userinfo.userid,'edituser']" mat-raised-button color="primary">
+        Edit
+      </button>
+      <button (click)="onRemove(userid)" mat-raised-button color="warn">
+        Remove
+      </button>
+    </div>
+  </div>
+
+  <div class="alert alert-info" *ngIf="!userinfo">
+    Loading user details...
+  </div>
+</div>
