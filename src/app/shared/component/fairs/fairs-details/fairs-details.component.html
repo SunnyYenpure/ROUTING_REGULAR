@@ -1,0 +1,51 @@
+<!-- <p>fairs-details works!</p> -->
+
+<!-- <div class="banner-wrapper">
+    <figure class="banner">
+        <img [src]="fairdetails.bannerUrl" alt="fairImg">
+        <p class="m-3 text-white">
+            <span class="d-block">Event Type: {{ fairdetails.type }}</span>
+            <span>Date & Time: {{ fairdetails.startDate * 1000 | date }}, {{ fairdetails.fairStartTime }}</span>
+        </p>
+    </figure>
+</div>
+<div
+[innerHTML]="fairdetails.candidateDescription">
+</div> -->
+
+
+<div class="banner-wrapper">
+  <figure class="banner">
+    <img
+      [src]="fairdetails.bannerUrl"
+      alt="Fair Banner"
+      class="banner-img"
+    />
+
+    <div class="banner-overlay">
+      <h2 class="fair-title">{{ fairdetails.fairName }}</h2>
+
+      <p class="fair-meta">
+        <span>
+          <strong>Event Type:</strong> {{ fairdetails.type }}
+        </span>
+        <span>
+          <strong>Date & Time:</strong>
+          {{ fairdetails.startDate * 1000 | date:'mediumDate' }},
+          {{ fairdetails.fairStartTime }}
+        </span>
+      </p>
+    </div>
+  </figure>
+</div>
+
+
+<div class="container mt-4">
+  <div class="description-card">
+    <h4 class="mb-3">About This Fair</h4>
+    <div class="fair-description" [innerHTML]="fairdetails.candidateDescription"></div>
+  </div>
+</div>
+
+
+<!-- <p>{{fairdetails.fairName}}</p> -->

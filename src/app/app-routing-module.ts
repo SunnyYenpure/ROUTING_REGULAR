@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardsComponent } from './shared/component/dashboards/dashboards.component';
 import { UsersComponent } from './shared/component/users/users.component';
@@ -7,6 +7,7 @@ import { ProductsComponent } from './shared/component/products/products.componen
 import { PageNotFoundComponent } from './shared/component/page-not-found/page-not-found.component';
 import { UserComponent } from './shared/component/users/user/user.component';
 import { UserformComponent } from './shared/component/users/userform/userform.component';
+import { FairsDetailsComponent } from './shared/component/fairs/fairs-details/fairs-details.component';
 
 const approutes: Routes = [
   {
@@ -49,10 +50,16 @@ const approutes: Routes = [
     path: 'products',
     component: ProductsComponent,
   },
-  {
-    path: 'fairs',
-    component: FairsComponent,
-  },
+ {
+  path: 'fairs',
+  component: FairsComponent,
+  children: [
+    {
+      path: ':fairsid',
+      component: FairsDetailsComponent
+    }
+  ]
+},
   // {
   //   path: 'admin',
   //   component: PageNotFoundComponent,

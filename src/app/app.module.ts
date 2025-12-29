@@ -24,6 +24,8 @@ import {MatSelectModule} from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import { GetConfirmComponent } from './shared/component/get-confirm/get-confirm.component';
 import { A11yModule } from "@angular/cdk/a11y";
+import { FairsCardComponent } from './shared/component/fairs/fairs-card/fairs-card.component';
+import { FairsDetailsComponent } from './shared/component/fairs/fairs-details/fairs-details.component';
 
 
 @NgModule({
@@ -37,7 +39,9 @@ import { A11yModule } from "@angular/cdk/a11y";
     PageNotFoundComponent,
     UserComponent,
     UserformComponent,
-    GetConfirmComponent
+    GetConfirmComponent,
+    FairsCardComponent,
+    FairsDetailsComponent
   ],
   imports: [
     BrowserModule,

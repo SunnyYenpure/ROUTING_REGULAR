@@ -1,0 +1,70 @@
+.banner-wrapper {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.banner {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.22);
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  padding: 16px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.2)
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #fff;
+}
+
+.fair-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.fair-meta span {
+  display: block;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.description-card {
+  background: #fff;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.fair-description {
+  font-size: 14px;
+  line-height: 1.65;
+  color: #444;
+}
+
+.fair-description p {
+  margin-bottom: 10px;
+}
+
+.fair-description ul {
+  padding-left: 18px;
+}
+
+.fair-description li {
+  margin-bottom: 5px;
+}

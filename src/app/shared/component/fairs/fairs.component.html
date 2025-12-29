@@ -1,8 +1,23 @@
-<p>fairs works!</p>
-
+<!-- <p>fairs works!</p> -->
 
 <!-- fairs to home -->
+<button
+  routerLink="/home"
+  class="btn btn-primary mr-3 left-btn back-btn">
+  ← Go-to dashboard
+</button>
 
-<!-- <button 
-routerLink="/home"
-class="btn btn-primary mr-3">Go-to dashboard</button> -->
+
+<div class="row">
+  <div class="col-md-4">
+    <app-fairs-card
+    [fairobj]="fair"
+    *ngFor="let fair of fairsarr"></app-fairs-card>
+  </div>
+
+  <div class="col-md-8">
+    <!-- <app-fairs-details></app-fairs-details> -->
+     <router-outlet></router-outlet>
+
+  </div>
+</div>
