@@ -1,22 +1,31 @@
-.fair-card{
-  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-  border-radius:12px;cursor:pointer;transition:.3s;border:2px solid transparent;
-  box-shadow:0 8px 22px rgba(15,32,39,.6)
+.fair-card {
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  cursor: pointer;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
-.fair-card:hover{
-  transform:translateY(-4px);
-  box-shadow:0 14px 32px rgba(32,58,67,.85)
+
+.fair-card:hover {
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
 }
-h3{
-  letter-spacing:1px;color:#e0f7fa;
-  text-shadow:0 3px 12px rgba(0,0,0,.6)
+
+.fair-card h3 {
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
 }
-.fair-card p{
-  background:rgba(255,255,255,.95);color:#333
+.fair-card p {
+  color: #555;
+  font-size: 14px;
 }
-.active-fair{
-  border:2px solid #00e5ff;
-  box-shadow:0 0 0 4px rgba(0,229,255,.35),0 12px 30px rgba(0,229,255,.55);
-  transform:scale(1.03)
+
+.active-fair {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 2px rgba(13, 110, 253, 0.25);
 }
-.fair-card strong{color:#00838f}
+
+.fair-card .bg-white {
+  border: 1px solid #f1f1f1;
+}

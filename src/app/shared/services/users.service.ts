@@ -9,34 +9,34 @@ export class UsersService {
  Userarr: Array<Iusers> = [
   {
     userid: '1',
-    username: 'Sumit',
+    username: 'Balaji',
     userrole: 'Admin',
-    email: 'sumit@gmail.com',
+    email: 'Balaji@gmail.com',
     mobile: '9876543210',
     isactive: true,
     createddate: '2025-01-01',
-    imageurl: 'https://i.pravatar.cc/150?img=12' // male
+    imageurl: 'https://i.pravatar.cc/150?img=12' 
   },
   {
   userid: '2',
-  username: 'Rahul',
+  username: 'Rohan',
   userrole: 'User',
-  email: 'rahul@gmail.com',
+  email: 'rohan@gmail.com',
   mobile: '9123456789',
   isactive: true,
   createddate: '2025-01-05',
-  imageurl: 'https://i.pravatar.cc/150?img=15' // male avatar
+  imageurl: 'https://i.pravatar.cc/150?img=15' 
 },
 
   {
     userid: '3',
-    username: 'Prerna',
+    username: 'Irshad',
     userrole: 'Manager',
-    email: 'prerna@gmail.com',
+    email: 'irshad@gmail.com',
     mobile: '9988776655',
     isactive: false,
     createddate: '2025-01-10',
-    imageurl: 'https://i.pravatar.cc/150?img=47&gender=female' // female
+    imageurl: 'https://i.pravatar.cc/150?img=56' 
   },
   {
     userid: '4',
@@ -46,17 +46,17 @@ export class UsersService {
     mobile: '9123456789',
     isactive: true,
     createddate: '2025-01-05',
-    imageurl: 'https://i.pravatar.cc/150?img=14' // male
+    imageurl: 'https://i.pravatar.cc/150?img=14' 
   },
   {
     userid: '5',
-    username: 'Rohan',
+    username: 'Sunny',
     userrole: 'User',
-    email: 'roy@gmail.com',
+    email: 'Sunny@gmail.com',
     mobile: '9144456789',
     isactive: true,
     createddate: '2025-01-05',
-    imageurl: 'https://i.pravatar.cc/150?img=56' // male
+    imageurl: 'https://i.pravatar.cc/150?img=56' 
   },
   {
     userid: '6',
@@ -66,7 +66,7 @@ export class UsersService {
     mobile: '9123456789',
     isactive: false,
     createddate: '2025-03-05',
-    imageurl: 'https://i.pravatar.cc/150?img=65' // male
+    imageurl: 'https://i.pravatar.cc/150?img=65' 
   },
 ];
 

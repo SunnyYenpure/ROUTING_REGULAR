@@ -1,10 +1,7 @@
 <div class="container mt-5">
   <div class="row justify-content-center">
     <div class="col-md-6 col-lg-5">
-
       <form #userform="ngForm" (ngSubmit)="onSubmit()" class="card p-4 shadow">
-
-        <!-- Username -->
         <div class="form-group mb-3">
           <label>Username</label>
           <input
@@ -13,14 +10,17 @@
             name="username"
             ngModel
             required
-            #username="ngModel" />
+            #username="ngModel"
+          />
 
-          <small class="text-danger" *ngIf="username.invalid && username.touched">
+          <small
+            class="text-danger"
+            *ngIf="username.invalid && username.touched"
+          >
             Username is required
           </small>
         </div>
 
-        <!-- Email -->
         <div class="form-group mb-3">
           <label>Email</label>
           <input
@@ -29,14 +29,14 @@
             name="email"
             ngModel
             required
-            #email="ngModel" />
+            #email="ngModel"
+          />
 
           <small class="text-danger" *ngIf="email.invalid && email.touched">
             Email is required
           </small>
         </div>
 
-        <!-- Mobile -->
         <div class="form-group mb-3">
           <label>Mobile</label>
           <input
@@ -45,14 +45,14 @@
             name="mobile"
             ngModel
             required
-            #mobile="ngModel" />
+            #mobile="ngModel"
+          />
 
           <small class="text-danger" *ngIf="mobile.invalid && mobile.touched">
             Mobile number is required
           </small>
         </div>
 
-        <!-- Role -->
         <div class="form-group mb-3">
           <label>User Role</label>
           <select
@@ -60,7 +60,8 @@
             name="userrole"
             ngModel
             required
-            #userrole="ngModel">
+            #userrole="ngModel"
+          >
             <option value="">Select role</option>
             <option value="Admin">Admin</option>
             <option value="User">User</option>
@@ -68,12 +69,14 @@
             <option value="HR">HR</option>
           </select>
 
-          <small class="text-danger" *ngIf="userrole.invalid && userrole.touched">
+          <small
+            class="text-danger"
+            *ngIf="userrole.invalid && userrole.touched"
+          >
             User role is required
           </small>
         </div>
 
-        <!-- Created Date -->
         <div class="form-group mb-3">
           <label>Created Date</label>
           <input
@@ -82,14 +85,17 @@
             name="createddate"
             ngModel
             required
-            #createddate="ngModel" />
+            #createddate="ngModel"
+          />
 
-          <small class="text-danger" *ngIf="createddate.invalid && createddate.touched">
+          <small
+            class="text-danger"
+            *ngIf="createddate.invalid && createddate.touched"
+          >
             Created date is required
           </small>
         </div>
 
-        <!-- Image URL -->
         <div class="form-group mb-3">
           <label>Image URL</label>
           <input
@@ -98,30 +104,34 @@
             name="imageurl"
             ngModel
             required
-            #imageurl="ngModel" />
+            #imageurl="ngModel"
+          />
 
-          <small class="text-danger" *ngIf="imageurl.invalid && imageurl.touched">
+          <small
+            class="text-danger"
+            *ngIf="imageurl.invalid && imageurl.touched"
+          >
             Image URL is required
           </small>
         </div>
 
-        <!-- Active -->
         <div class="form-check mb-3">
           <input
             class="form-check-input"
             type="checkbox"
             name="isactive"
-            ngModel />
+            ngModel
+          />
           <label class="form-check-label"> Active User </label>
         </div>
 
-        <!-- Buttons -->
         <div class="d-flex justify-content-between mt-3">
           <button
             *ngIf="!isineditmode"
             type="submit"
             class="btn btn-primary btn-block"
-            [disabled]="userform.invalid">
+            [disabled]="userform.invalid"
+          >
             Save
           </button>
 
@@ -130,11 +140,11 @@
             type="button"
             class="btn btn-primary btn-block"
             [disabled]="userform.invalid"
-            (click)="onUpdate()">
+            (click)="onUpdate()"
+          >
             Update
           </button>
         </div>
-
       </form>
     </div>
   </div>

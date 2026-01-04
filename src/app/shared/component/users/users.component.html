@@ -1,12 +1,4 @@
-<!-- <p>users works!</p>  -->
 
-<!-- user to fairs -->
-
-<!-- <button 
-routerLink="/fairs"
-class="btn btn-primary mr-3">Go-to fairs</button> -->
-
-<!-- <h3>Welcome To users Dashboards..</h3> -->
  <div class="user-dashboard-header text-center">
   <h3><strong>Welcome To users Dashboards..</strong></h3>
 </div>
@@ -15,15 +7,14 @@ class="btn btn-primary mr-3">Go-to fairs</button> -->
   <div class="col-12 text-right">
     <button
     routerLink="adduser"
-    mat-mini-fab color="accent">
-      <!-- <span class="fw-semibold">Add New Users</span> -->
+    mat-mini-fab color="primary">
       <mat-icon
         ><span class="material-symbols-outlined" class="mr-4">
           person_add
         </span></mat-icon
       >
     </button>
-    <strong class="mr-2">Add New Users</strong>
+    <strong class="mr-2">Add  Users</strong>
   </div>
 </div>
 <h3>
@@ -41,7 +32,6 @@ class="btn btn-primary mr-3">Go-to fairs</button> -->
         *ngFor="let user of userarray"
       >
         <div class="d-flex justify-content-between align-items-center">
-          <!-- <span></span> -->
           <strong>{{ user.username }}</strong>
           <span class="text-muted">{{ user.userrole }}</span>
         </div>
