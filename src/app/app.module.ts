@@ -28,6 +28,8 @@ import { FairsCardComponent } from './shared/component/fairs/fairs-card/fairs-ca
 import { FairsDetailsComponent } from './shared/component/fairs/fairs-details/fairs-details.component';
 import { ProductFormComponent } from './shared/component/products/product-form/product-form.component';
 import { ProductComponent } from './shared/component/products/product/product.component';
+import { AuthComponent } from './shared/component/auth/auth.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -45,7 +47,8 @@ import { ProductComponent } from './shared/component/products/product/product.co
     FairsCardComponent,
     FairsDetailsComponent,
     ProductFormComponent,
-    ProductComponent
+    ProductComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +63,8 @@ import { ProductComponent } from './shared/component/products/product/product.co
     MatSelectModule,
     FormsModule,
     A11yModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    HttpClientModule
 
 ],
   providers: [],

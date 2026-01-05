@@ -16,10 +16,16 @@ export class ProductsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this._productservice.fetchallproducts().subscribe({
+    //  this._router.navigate([this.productarr[0].id])
+   this.getAll()
+  }
+
+  getAll(){
+     this._productservice.fetchallproducts().subscribe({
       next: (data) => {
         console.log(data);
         this.productarr = data;
+        // this._router.navigate([this.productarr[0].id])
       },
       error: (err) => {
         console.log(err);

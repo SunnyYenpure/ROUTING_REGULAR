@@ -10,6 +10,8 @@ import { UserformComponent } from './shared/component/users/userform/userform.co
 import { FairsDetailsComponent } from './shared/component/fairs/fairs-details/fairs-details.component';
 import { ProductFormComponent } from './shared/component/products/product-form/product-form.component';
 import { ProductComponent } from './shared/component/products/product/product.component';
+import { AuthComponent } from './shared/component/auth/auth.component';
+import { AuthguardService } from './shared/services/authguard.service';
 
 const approutes: Routes = [
   {
@@ -22,13 +24,18 @@ const approutes: Routes = [
   // },
   {
     path: '',
-    component: DashboardsComponent,
+    component: AuthComponent,
   },
   //   {
   //     path: '',
   //     redirectTo: 'home',
   //     pathMatch:'full'
   //   },
+{
+    path: 'users',
+    component: UsersComponent,
+    canActivate:[AuthguardService]
+  },
 
   {
     path: 'users/adduser',
@@ -43,14 +50,12 @@ const approutes: Routes = [
     path: 'users/:userid/edituser',
     component: UserformComponent,
   },
-  {
-    path: 'users',
-    component: UsersComponent,
-  },
+  
 
   {
     path: 'products',
     component: ProductsComponent,
+    // canActivateChild:[AuthguardService],
     children:[
       {
         path:'addproducts',
