@@ -26,6 +26,8 @@ import { GetConfirmComponent } from './shared/component/get-confirm/get-confirm.
 import { A11yModule } from "@angular/cdk/a11y";
 import { FairsCardComponent } from './shared/component/fairs/fairs-card/fairs-card.component';
 import { FairsDetailsComponent } from './shared/component/fairs/fairs-details/fairs-details.component';
+import { ProductFormComponent } from './shared/component/products/product-form/product-form.component';
+import { ProductComponent } from './shared/component/products/product/product.component';
 
 
 @NgModule({
@@ -41,7 +43,9 @@ import { FairsDetailsComponent } from './shared/component/fairs/fairs-details/fa
     UserformComponent,
     GetConfirmComponent,
     FairsCardComponent,
-    FairsDetailsComponent
+    FairsDetailsComponent,
+    ProductFormComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,

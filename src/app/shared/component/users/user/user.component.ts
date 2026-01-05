@@ -50,7 +50,7 @@ export class UserComponent implements OnInit {
     let Configobj= new MatDialogConfig()
     Configobj.width = "350px";
     Configobj.disableClose = true ;
-    Configobj.data = `are you sure, you want to remove this user`
+    Configobj.data = `Are you sure, you want to remove this user`
 
  let matDialogRef = this._matDialog.open(GetConfirmComponent,Configobj)
         matDialogRef.afterClosed()

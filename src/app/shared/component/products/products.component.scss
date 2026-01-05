@@ -1,0 +1,23 @@
+.product-card {
+  max-width: 520px;
+}
+
+.product-img-left {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  padding: 10px;
+  background: #f8f9fa;
+}
+
+.left-scroll {
+  height: calc(100vh - 20px);
+  overflow-y: auto;
+
+  direction: rtl;        
+  padding-left: 10px;
+}
+
+.left-scroll > * {
+  direction: ltr;
+}

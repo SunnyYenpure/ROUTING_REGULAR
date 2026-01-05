@@ -1,3 +1,64 @@
-<p>products works!</p>
+<div class="container-fluid">
+  <div class="row">
+<div class="col-12 d-flex justify-content-end">
+  <button
+  routerLink="/products/addproducts"
+  class="btn btn-sm btn-outline-primary">
+    Add Product
+  </button>
+</div>
 
 
+    <div class="col-md-5">
+      <div class="left-scroll">
+
+        <div
+          class="card product-card shadow-sm d-flex flex-row mb-3"
+          *ngFor="let product of productarr">
+
+          <img
+            [src]="product.imageUrl"
+            class="product-img-left"
+            alt="product image"
+          />
+
+          <div class="card-body">
+            <h5 class="card-title">{{ product.name }}</h5>
+
+            <p class="card-text text-muted mb-2">
+              {{ product.description }}
+            </p>
+
+            <h6 class="text-primary mb-1">₹ {{ product.price }}</h6>
+
+            <span
+              class="badge"
+              [ngClass]="product.inStock ? 'bg-success' : 'bg-danger'">
+              {{ product.inStock ? 'In Stock' : 'Out of Stock' }}
+            </span>
+
+            <div>
+              <button 
+             
+              (click)="gotoproduct(product)"
+                class="btn btn-sm btn-outline-primary mt-2"
+                [disabled]="!product.inStock">
+                View Details
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- RIGHT EMPTY SECTION -->
+     <!-- //child routing -->
+    <div class="col-md-7">
+
+        <router-outlet></router-outlet>
+    </div>
+
+  </div>
+</div>

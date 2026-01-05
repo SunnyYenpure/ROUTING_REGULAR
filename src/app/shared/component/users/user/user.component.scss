@@ -17,7 +17,6 @@
 .back-btn {
   display: flex;
   align-items: center;
-  gap: 6px;
 }
 
 .user-id {
@@ -25,54 +24,8 @@
   font-size: 12px;
 }
 
-.avatar {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
-}
 
-.avatar img,
-.avatar-fallback {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  background: #3f51b5;
-  color: #fff;
-  font-size: 36px;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  object-fit: cover;
-}
 
-.user-body {
-  margin-top: 20px;
-}
 
-.detail-row {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 0;
-  border-bottom: 1px solid #eee;
-}
 
-.detail-row:last-child {
-  border-bottom: none;
-}
 
-.label {
-  font-weight: 600;
-  color: #555;
-}
-
-.value {
-  color: #333;
-}
-
-.user-actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 12px;
-  margin-top: 24px;
-}

@@ -8,6 +8,8 @@ import { PageNotFoundComponent } from './shared/component/page-not-found/page-no
 import { UserComponent } from './shared/component/users/user/user.component';
 import { UserformComponent } from './shared/component/users/userform/userform.component';
 import { FairsDetailsComponent } from './shared/component/fairs/fairs-details/fairs-details.component';
+import { ProductFormComponent } from './shared/component/products/product-form/product-form.component';
+import { ProductComponent } from './shared/component/products/product/product.component';
 
 const approutes: Routes = [
   {
@@ -18,26 +20,26 @@ const approutes: Routes = [
   //   path: 'home/products',
   //   component: ProductsComponent,
   // },
-    {
-      path:'',
-      component:DashboardsComponent
+  {
+    path: '',
+    component: DashboardsComponent,
   },
-//   {
-//     path: '',
-//     redirectTo: 'home',
-//     pathMatch:'full'
-//   },
+  //   {
+  //     path: '',
+  //     redirectTo: 'home',
+  //     pathMatch:'full'
+  //   },
 
-{
+  {
     path: 'users/adduser',
     component: UserformComponent,
   },
 
- {
+  {
     path: 'users/:userid',
     component: UserComponent,
   },
-   {
+  {
     path: 'users/:userid/edituser',
     component: UserformComponent,
   },
@@ -45,35 +47,49 @@ const approutes: Routes = [
     path: 'users',
     component: UsersComponent,
   },
- 
+
   {
     path: 'products',
     component: ProductsComponent,
+    children:[
+      {
+        path:'addproducts',
+        component:ProductFormComponent
+      },
+       {
+        path:':productid/edit',
+        component:ProductFormComponent
+      },
+      {
+        path:':productid',
+        component:ProductComponent
+      }
+    ]
   },
- {
-  path: 'fairs',
-  component: FairsComponent,
-  children: [
-    {
-      path: ':fairsid',
-      component: FairsDetailsComponent
-    }
-  ]
-},
+  {
+    path: 'fairs',
+    component: FairsComponent,
+    children: [
+      {
+        path: ':fairsid',
+        component: FairsDetailsComponent,
+      },
+    ],
+  },
   // {
   //   path: 'admin',
   //   component: PageNotFoundComponent,
   // },
- {
+  {
     path: 'PageNotFoundComponent',
     component: PageNotFoundComponent,
   },
-  
-   {
+
+  {
     path: '**',
-redirectTo:"PageNotFoundComponent",
-pathMatch:"full"
-},
+    redirectTo: 'PageNotFoundComponent',
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({
