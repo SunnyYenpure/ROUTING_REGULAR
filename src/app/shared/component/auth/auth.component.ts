@@ -47,6 +47,7 @@ export class AuthComponent implements OnInit {
     this._authservice.signup(obj).subscribe({
       next: (data) => {
         this._authservice.settoken(data.token);
+        this._snackbarservice.opensnackbar(data.message)
         this.alreadyhaveacc = false;
       },
       error: (err) => {
