@@ -46,11 +46,11 @@ const approutes: Routes = [
     path: 'users/:userid',
     component: UserComponent,
   },
-  {
+
+    {
     path: 'users/:userid/edituser',
     component: UserformComponent,
   },
-  
 
   {
     path: 'products',
